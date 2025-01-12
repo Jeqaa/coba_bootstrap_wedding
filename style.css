@@ -1,14 +1,15 @@
 :root {
-  --pink: #f14e95;
-  --bg: #0a0a0a;
+  --yellow: #d19628;
+  --bg: #0e1111;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
 body {
   /* 1.2 x 16px */
   font-size: 1.2rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   min-height: 4000px;
+  font-style: normal;
 }
 
 .hero::before {
@@ -18,12 +19,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/bg-prewed.jpg);
+  background-image: url(img/btceth2.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-  filter: grayscale();
+  filter: grayscale() brightness(0.6);
 }
 
 .hero {
@@ -39,7 +40,6 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Sacramento', cursive;
   font-size: 5rem;
 }
 
@@ -52,19 +52,19 @@ body {
 }
 
 .hero a {
-  color: var(--pink);
+  color: var(--yellow);
   background-color: white;
   box-shadow: var(--shadow);
 }
 
 .hero a:hover {
-  background-color: var(--pink);
+  background-color: var(--yellow);
   color: white;
 }
 
 .mynavbar {
   /* !important untuk menggunakan style itu */
-  background-color: rgba(239, 239, 239, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
   backdrop-filter: blur(4px);
 }
 
@@ -74,8 +74,7 @@ body {
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: 'Sacramento', cursive;
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -86,9 +85,9 @@ body {
 .home {
   background-image: url(img/bg.png);
   background-size: cover;
+  margin-top: -4rem;
   min-height: 100vh;
-  margin-top: -6rem;
-  padding-top: 15rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
 }
 
@@ -98,7 +97,7 @@ body {
 .gallery h2,
 .rsvp h2,
 .gifts h2 {
-  color: var(--pink);
+  color: var(--yellow);
   font-family: 'Sacramento';
   font-size: 5rem;
   font-weight: bold;
@@ -122,15 +121,17 @@ body {
 .home .couple h3 {
   font-family: 'Sacramento';
   font-size: 2.4rem;
-  color: var(--pink);
+  color: var(--yellow);
 }
+
 .home .couple img {
   width: 100%;
 }
 
-.home .heart {
+.home .btc {
   width: 50px;
   height: 50px;
+  font-size: 1.5rem;
   background-color: white;
   display: flex;
   border-radius: 50%;
@@ -140,15 +141,15 @@ body {
   transform: translateX(-50%) translateY(65px);
 }
 
-.home .heart i {
+.home .btc i {
   margin: auto;
-  color: var(--pink);
+  color: var(--yellow);
 }
 
 .info {
   background-color: var(--bg);
   color: white;
-  padding-top: 10rem;
+  padding-top: 6rem;
   padding-bottom: 8rem;
 }
 
@@ -187,7 +188,7 @@ body {
 .gallery,
 .rsvp,
 .gifts {
-  padding-top: 10rem;
+  padding-top: 6rem;
   padding-bottom: 8rem;
 }
 
@@ -250,6 +251,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
+  border: 1px solid #ccc;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -328,20 +330,20 @@ body {
 }
 
 .rsvp button {
-  background-color: var(--pink);
+  background-color: var(--yellow);
   color: white;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--yellow);
 }
 
 .rsvp button:hover {
   background-color: white;
-  color: var(--pink);
+  color: var(--yellow);
   border: 1px solid white;
 }
 
 footer {
   padding: 3rem;
-  background-color: var(--pink);
+  background-color: var(--yellow);
   color: white;
 }
 
@@ -393,7 +395,7 @@ footer li {
 /* media query */
 /* Extra large */
 @media (max-width: 1200px) {
-  .home .heart {
+  .home .btc {
     transform: translateX(-50%) translateY(45px);
   }
 }
@@ -407,7 +409,7 @@ footer li {
     padding: 70px;
   }
 
-  .home .heart {
+  .home .btc {
     display: none;
   }
 
@@ -473,7 +475,7 @@ footer li {
   }
 
   .simply-countdown > .simply-section {
-    padding: 45px;
+    padding: 40px;
     margin: 3px;
   }
 
@@ -492,5 +494,10 @@ footer li {
   }
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+
+  .rsvp,
+  .gifts {
+    padding: 5rem 1.5rem;
   }
 }
